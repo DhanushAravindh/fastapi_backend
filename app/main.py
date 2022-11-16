@@ -29,16 +29,16 @@ app.add_middleware(CORSMiddleware,
 
 # Session talking with database
 
-while True:
-    try:
-        conn = psycopg2.connect(host='localhost', database='database_for_api',
-                                user='postgres', password='database123', cursor_factory=RealDictCursor)
-        cursor = conn.cursor()
-        print("Connected to database")
-        break
-    except Exception as error:
-        print("Error: ", error)
-        time.sleep(2)
+# while True:
+#     try:
+#         conn = psycopg2.connect(host='localhost', database='database_for_api',
+#                                 user='postgres', password='database123', cursor_factory=RealDictCursor)
+#         cursor = conn.cursor()
+#         print("Connected to database")
+#         break
+#     except Exception as error:
+#         print("Error: ", error)
+#         time.sleep(2)
 
 my_posts = [{"id": 1, "title": "title of post1", "content": "content of post 1"}, {
     "id": 2, "title": "title of post2", "content": "content of post 2"}]
